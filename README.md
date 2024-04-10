@@ -15,11 +15,13 @@ Tạo menu chức năng cho người dùng để thực hiện các thao tác sa
 4. Danh Sách Khách hàng sắp tới.
 5. Thống kê
 6. Thoát khỏi chương trình.
+
+Chọn một chức năng (1-6): 
 ```
 
 1. Khi thêm khách hàng vào hàng đợi
   - Nhập thông tin sau: Tên khách hàng và Số tiền cần rút. 
-  - Nếu số tiền cần rút lớn hơn 500.000.000, khách hàng sẽ được coi là VIP và được thêm vào cuối hàng đợi của khách VIP. Ngược lại khách hàng sẽ được thêm vào cuối hàng đợi của khách bình thường.
+  - Nếu số tiền cần rút lớn hơn 500, khách hàng sẽ được coi là VIP và được thêm vào cuối hàng đợi của khách VIP. Ngược lại khách hàng sẽ được thêm vào cuối hàng đợi của khách bình thường.
   - Mỗi khách hàng khi thêm vào hàng đợi sẽ được gán một số thứ tự.
 
 2. Khi gọi tên khách hàng kế tiếp(VIP và Thường)
@@ -37,7 +39,69 @@ Tạo menu chức năng cho người dùng để thực hiện các thao tác sa
 
 - Chương trình sẽ dùng LinkedList & Queue để thao tác dữ liệu.
 - Menu chương trình như sau:
-![alt text](image.png)
+
+```console
+=== Thêm khách hàng vào hàng đợi ===
+Nhập thông tin khách hàng:
+
+Tên: Huy
+Số tiền cần rút: 600
+
+Khách hàng Huy đã được thêm vào hằng đợi VIP
+Số thứ tự là: 1
+```
+
+```console
+=== Gọi tên khách hàng kế tiếp (VIP) ===
+Đến lượt khách hàng VIP:
+
+Số thứ tự: 1
+Tên: Huy
+Số tiền cần rút: 600
+
+Đã rút thành công số tiền: 600 VND
+```
+
+```console
+=== Gọi tên khách hàng kế tiếp (Thường) ===
+Đến lượt khách hàng Thường:
+
+Số thứ tự: 15
+Tên: Culy
+Số tiền cần rút: 300
+
+Đã rút thành công số tiền: 300 VND
+```
+
+```console
+=== Danh Sách Khách hàng sắp tới ===
+Hàng đợi VIP:
+
+1. VIP002 - Robert
+2. VIP003 - Hello
+3. VIP004 - David
+
+Hàng đợi VIP:
+
+1. Eco003 - Mario
+2. Eco004 - Solo
+3. Eco005 - Mabu
+
+Tổng số khách VIP đang chờ: 3
+Tổng số khách thường đang chờ: 30
+```
+
+```console
+=== Thống kê ===
+1. Danh sách khách đã rút:
+  1. VIP002 - Robert
+  2. VIP003 - Hello
+  3. VIP004 - David
+  ...
+
+2. Tổng tiền đã rút: 100,000
+3. Tổng tiền trong hằng chờ: 50,000
+```
 
 - Nâng cao: Dữ liệu của chương trình lưu trong file JSON và sẽ không bị mất nếu chương trình đột ngột dừng lại.
 - Tạo dữ liệu giả bằng cách https://www.mockaroo.com/
