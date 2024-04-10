@@ -38,6 +38,7 @@ Chọn một chức năng (1-6):
   - Hiển thị tổng số tiền còn lại trong hàng đợi(cả VIP và Thường).
 
 - Chương trình sẽ dùng LinkedList & Queue để thao tác dữ liệu.
+- Hãy mở trang web [draw.io](https://app.diagrams.net/) và mở file [file diagram để dễ làm việc](capstone-diagram.drawio) để xem chi tiết.
 - Menu chương trình như sau:
 
 ```console
