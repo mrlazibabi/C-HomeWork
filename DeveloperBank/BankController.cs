@@ -5,11 +5,11 @@
 /// </summary>
 public class BankController
 {
-    public BankUIConsole bankUIConsole { get; set; }
+    public BankUIManager bankUIConsole { get; set; }
 
     public BankController()
     {
-        bankUIConsole = new BankUIConsole();
+        bankUIConsole = new BankUIManager();
     }
 
     public void DisplayMenu()
