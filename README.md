@@ -104,7 +104,7 @@ Tổng số khách thường đang chờ: 30
 3. Tổng tiền trong hằng chờ: 50,000
 ```
 
-- Nâng cao: Dữ liệu của chương trình lưu trong file JSON và sẽ không bị mất nếu chương trình đột ngột dừng lại.
+- Dữ liệu của chương trình lưu trong file JSON và sẽ không bị mất nếu chương trình đột ngột dừng lại.
 - Tạo dữ liệu giả bằng cách https://www.mockaroo.com/
 - Viết unit test cho các hàm đã triển khai để đảm bảo hoạt động được như mong đợi
-
+- Nâng cao: Giả sử rằng mỗi một lần khách hàng có rút tiền có 1 mã số rút tiền riêng biệt hãy triển khai hàm tìm kiếm thông tin lần rút tiền dựa trên mã số rút tiền này. Lưu ý sử dụng binary search tree để tối ưu hóa việc tìm kiếm. kết quả là hiển thị thông tin về giao dịch này.
