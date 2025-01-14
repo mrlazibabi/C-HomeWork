@@ -82,7 +82,7 @@ Hàng đợi VIP:
 2. VIP003 - Hello
 3. VIP004 - David
 
-Hàng đợi VIP:
+Hàng đợi Thường:
 
 1. Eco003 - Mario
 2. Eco004 - Solo
@@ -98,6 +98,7 @@ Tổng số khách thường đang chờ: 30
   1. VIP002 - Robert
   2. VIP003 - Hello
   3. VIP004 - David
+  4. Eco003 - Mario
   ...
 
 2. Tổng tiền đã rút: 100,000
