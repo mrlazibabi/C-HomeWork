@@ -1,6 +1,6 @@
 ﻿public class Library
 {
-    private Book[] Books = new Book[0];
+    public Book[] Books = new Book[0];
 
     public void AddBook(Book newBook)
     {
@@ -51,5 +51,104 @@
             }
         }
         return false;
+    }
+
+    public Book[] FindBooksByAuthor(string author)
+    {
+        int count = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].Author.Equals(author, StringComparison.OrdinalIgnoreCase))
+            {
+                count++;
+            }
+        }
+
+        Book[] books = new Book[count];
+        int index = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].Author.Equals(author, StringComparison.OrdinalIgnoreCase))
+            {
+                books[index++] = Books[i];
+            }
+        }
+
+        return books;
+    }
+
+    public Book[] FindBooksByYear(int year)
+    {
+        int count = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].PublishedYear == year)
+            {
+                count++;
+            }
+        }
+
+        Book[] books = new Book[count];
+        int index = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].PublishedYear == year)
+            {
+                books[index++] = Books[i];
+            }
+        }
+
+        return books;
+    }
+    public Book[] FindBooksByCategory(string category)
+    {
+        int count = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+            {
+                count++;
+            }
+        }
+
+        Book[] books = new Book[count];
+        int index = 0;
+
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].Category.Equals(category, StringComparison.OrdinalIgnoreCase))
+            {
+                books[index++] = Books[i];
+            }
+        }
+
+        return books;
+    }
+
+
+    public bool UpdateBookInfo(string isbn, string newTitle, string newAuthor, string newCategory, int newPublishedYear)
+    {
+        for (int i = 0; i < Books.Length; i++)
+        {
+            if (Books[i] != null && Books[i].ISBN.Equals(isbn, StringComparison.OrdinalIgnoreCase))
+            {
+                Books[i].Title = newTitle;
+                Books[i].Author = newAuthor;
+                Books[i].Category = newCategory;
+                Books[i].PublishedYear = newPublishedYear;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int TotalBooks()
+    {
+        return Books.Length;
     }
 }
