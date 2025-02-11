@@ -1,39 +1,49 @@
-﻿Console.WriteLine("Lua chon 1 trong 3 lua chon sau: keo = 1, bua = 2, bao = 3");
-Console.WriteLine("Nguoi choi lua chon: ");
-int playerChoice = Convert.ToInt32(Console.ReadLine());
+﻿Console.OutputEncoding = System.Text.Encoding.UTF8;
+try
+{
+    Console.WriteLine("Lua chon 1 trong 3 lua chon sau: keo = 1, bua = 2, bao = 3");
+    Console.WriteLine("Nguoi choi lua chon: ");
+    int playerChoice = Convert.ToInt32(Console.ReadLine());
 
-int computerChoice = Random.Shared.Next(1, 4);
-Console.WriteLine("Computer choice: "+computerChoice);
+    int computerChoice = Random.Shared.Next(1, 4);
+    Console.WriteLine("Computer choice: " + computerChoice);
 
-if (playerChoice == 1 && computerChoice == 2)
-{
-    Console.WriteLine("Computer win!");
+    Game game = new Game();
+    string result =  game.KeoBuaBao(playerChoice, computerChoice);
+    Console.WriteLine(result);
 }
-else if (playerChoice == 1 && computerChoice == 3)
+catch (Exception ex)
 {
-    Console.WriteLine("You win!");
+    Console.WriteLine($"Message: {ex.Message}"); ;
 }
-else if (playerChoice == 2 && computerChoice == 1)
+
+
+public class Game
 {
-    Console.WriteLine("You win!");
-}
-else if (playerChoice == 2 && computerChoice == 3)
-{
-    Console.WriteLine("Computer win!");
-}
-else if (playerChoice == 3 && computerChoice == 1)
-{
-    Console.WriteLine("Computer win!");
-}
-else if (playerChoice == 3 && computerChoice == 2)
-{
-    Console.WriteLine("You win!");
-}
-else if(playerChoice == computerChoice)
-{
-    Console.WriteLine("Draw");
-}
-else
-{
-    Console.WriteLine("Lam gi co vat nao dung cho so ban chon ???");
+    const int KEO = 1;
+    const int BUA = 2;
+    const int BAO = 3;
+
+    public string KeoBuaBao(int playerChoice, int computerChoice)
+    {
+        if(playerChoice < 1 || playerChoice > 3)
+        {
+            throw new ArgumentException("Player Choice không hợp lệ.");
+        }
+
+        if(playerChoice == computerChoice)
+        {
+            return ("Draw!");
+        }
+        else if(playerChoice == BUA && computerChoice == KEO ||
+                playerChoice == KEO && computerChoice == BAO ||
+                playerChoice == BAO && computerChoice == BUA)
+        {
+            return ("PLayer Win!");
+        }
+        else
+        {
+            return("Computer win!");
+        }
+    }
 }
