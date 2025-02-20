@@ -2,7 +2,7 @@
 
 public static class FileManager
 {
-    public static string filePath = @"E:\Net 7\Csharp101\làm c#\C#HomeWork\game_data.txt";
+    public static readonly string filePath = @"E:\Net 7\Csharp101\làm c#\C#HomeWork\game_data.txt";
 
     public static GameData LoadData()
     {
@@ -10,24 +10,37 @@ public static class FileManager
         {
             if (!File.Exists(filePath))
             {
-                Console.WriteLine("Không tìm thấy tệp dữ liệu. Sẽ tạo dữ liệu mới.");
+                Console.WriteLine("Không tìm thấy tệp dữ liệu, tạo dữ liệu mới.");
                 return new GameData();
             }
 
             string json = File.ReadAllText(filePath);
-            GameData data = JsonSerializer.Deserialize<GameData>(json);
 
-            if (data == null)
+            if (string.IsNullOrWhiteSpace(json))
             {
-                Console.WriteLine("Dữ liệu trong tệp bị lỗi. Sẽ tạo dữ liệu mới.");
+                Console.WriteLine("Tạo dữ liệu mới.");
                 return new GameData();
             }
 
-            return data;
+            GameData data = JsonSerializer.Deserialize<GameData>(json);
+            
+            if (data == null)
+            {
+                return new GameData();
+            }
+            else
+            {
+                return data;
+            }
+        }
+        catch (JsonException)
+        {
+            Console.WriteLine("Dữ liệu trong tệp bị lỗi.");
+            return new GameData();
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Lỗi khi đọc tệp: " + ex.Message);
+            Console.WriteLine("Lỗi: " + ex.Message);
             return new GameData(); 
         }
     }
@@ -36,6 +49,12 @@ public static class FileManager
     {
         try
         {
+            string directory = Path.GetDirectoryName(filePath); //dam bao thu muc ton tai
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             string json = JsonSerializer.Serialize(data, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(filePath, json);
         }

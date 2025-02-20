@@ -42,6 +42,7 @@ void PlayGame(GameData data)
         return;
     }
 
+    DateTime startTime = DateTime.Now;  //ghi lai thoi gian bat dau
     int targetNumber = Random.Shared.Next(1, 11);
     int attempts = 0;
     int guess = 0;
@@ -72,13 +73,17 @@ void PlayGame(GameData data)
 
     } while (guess != targetNumber);
 
+    DateTime endTime = DateTime.Now; //ghi lai thoi gian ket thuc
+
     Console.WriteLine($"Chúc mừng {playerName}, bạn đã đoán đúng sau {attempts} lần!");
 
-    data.AddHistory(new Record(playerName, attempts));
+    Record newRecord = new Record(playerName, attempts, startTime, endTime);
+
+    data.AddHistory(newRecord);
 
     if (data.record == null || attempts < data.record.attempts)
     {
-        data.record = new Record(playerName, attempts);
+        data.record = newRecord;
         Console.WriteLine($"Bạn đã lập kỷ lục mới với {attempts} lần đoán!");
     }
 
@@ -94,7 +99,7 @@ void ShowRecords(GameData data)
     }
     else
     {
-        Console.WriteLine($"Kỷ lục: {data.record.name} - {data.record.attempts} lần đoán.");
+        Console.WriteLine($"Kỷ lục: {data.record.name} - {data.record.attempts} lần đoán, {data.record.duration} giây");
     }
 
     Console.WriteLine("\n===== Lịch Sử Các Lần Chơi =====");
@@ -106,7 +111,7 @@ void ShowRecords(GameData data)
     {
         foreach (Record entry in data.history)
         {
-            Console.WriteLine($"{entry.name} - {entry.attempts} lần đoán");
+            Console.WriteLine($"{entry.name} - {entry.attempts} lần đoán, {entry.duration} giây");
         }
     }
 }
