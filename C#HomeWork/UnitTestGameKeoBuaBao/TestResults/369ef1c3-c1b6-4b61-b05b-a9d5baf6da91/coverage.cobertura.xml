@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.46869999999999995" branch-rate="1" version="1.9" timestamp="1740823367" lines-covered="15" lines-valid="32" branches-covered="18" branches-valid="18">
+  <sources>
+    <source>E:\</source>
+  </sources>
+  <packages>
+    <package name="Choice" line-rate="1" branch-rate="1" complexity="0">
+      <classes />
+    </package>
+    <package name="TestGameKeoBuaBao" line-rate="0.46869999999999995" branch-rate="1" complexity="19">
+      <classes>
+        <class name="Program" filename="Net 7\Csharp101\làm c#\C#HomeWork\C#HomeWork\TestGameKeoBuaBao\Program.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;Main&gt;$" signature="(System.String[])" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="3" hits="0" branch="False" />
+                <line number="5" hits="0" branch="False" />
+                <line number="6" hits="0" branch="False" />
+                <line number="8" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="12" hits="0" branch="False" />
+                <line number="13" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="3" hits="0" branch="False" />
+            <line number="5" hits="0" branch="False" />
+            <line number="6" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="12" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="KeoBuaBao" filename="Net 7\Csharp101\làm c#\C#HomeWork\C#HomeWork\TestGameKeoBuaBao\Program.cs" line-rate="1" branch-rate="1" complexity="18">
+          <methods>
+            <method name="CheckResult" signature="(PlayerChoice.Choice,PlayerChoice.Choice)" line-rate="1" branch-rate="1" complexity="18">
+              <lines>
+                <line number="28" hits="12" branch="False" />
+                <line number="29" hits="12" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="22" type="jump" coverage="100%" />
+                    <condition number="53" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="3" branch="False" />
+                <line number="31" hits="3" branch="False" />
+                <line number="34" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="73" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="3" branch="False" />
+                <line number="36" hits="3" branch="False" />
+                <line number="38" hits="6" branch="True" condition-coverage="100% (12/12)">
+                  <conditions>
+                    <condition number="86" type="jump" coverage="100%" />
+                    <condition number="90" type="jump" coverage="100%" />
+                    <condition number="94" type="jump" coverage="100%" />
+                    <condition number="98" type="jump" coverage="100%" />
+                    <condition number="102" type="jump" coverage="100%" />
+                    <condition number="116" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="6" branch="False" />
+                <line number="41" hits="3" branch="False" />
+                <line number="42" hits="3" branch="False" />
+                <line number="45" hits="3" branch="False" />
+                <line number="46" hits="3" branch="False" />
+                <line number="48" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="28" hits="12" branch="False" />
+            <line number="29" hits="12" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="22" type="jump" coverage="100%" />
+                <condition number="53" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="3" branch="False" />
+            <line number="31" hits="3" branch="False" />
+            <line number="34" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="73" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="3" branch="False" />
+            <line number="36" hits="3" branch="False" />
+            <line number="38" hits="6" branch="True" condition-coverage="100% (12/12)">
+              <conditions>
+                <condition number="86" type="jump" coverage="100%" />
+                <condition number="90" type="jump" coverage="100%" />
+                <condition number="94" type="jump" coverage="100%" />
+                <condition number="98" type="jump" coverage="100%" />
+                <condition number="102" type="jump" coverage="100%" />
+                <condition number="116" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="6" branch="False" />
+            <line number="41" hits="3" branch="False" />
+            <line number="42" hits="3" branch="False" />
+            <line number="45" hits="3" branch="False" />
+            <line number="46" hits="3" branch="False" />
+            <line number="48" hits="9" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
