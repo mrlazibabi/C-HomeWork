@@ -1,0 +1,5 @@
+﻿# Bỏ qua test coverage
+coveragereport/
+coverage/
+*.coverage
+*.lcov
