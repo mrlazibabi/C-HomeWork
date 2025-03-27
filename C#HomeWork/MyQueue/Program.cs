@@ -3,7 +3,7 @@ queue.Enqueue(10);
 queue.Enqueue(20);
 queue.Enqueue(30);
 
-Console.WriteLine(queue.Front());
+Console.WriteLine(queue.Front()); 
 Console.WriteLine(queue.Dequeue());
 Console.WriteLine(queue.Dequeue());
 Console.WriteLine(queue.Count);

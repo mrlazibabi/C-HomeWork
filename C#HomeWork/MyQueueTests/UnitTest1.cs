@@ -6,7 +6,7 @@ public class MyQueueTests
     [Fact]
     public void Enqueue_ShouldAddElementsToQueue() 
     {
-        var queue = new MyQueue(3);
+        var queue = new MyQueue(3); 
         queue.Enqueue(10);
         queue.Enqueue(20);
         queue.Enqueue(30);
