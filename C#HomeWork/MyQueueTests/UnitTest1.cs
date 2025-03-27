@@ -4,7 +4,7 @@ using Xunit;
 public class MyQueueTests
 {
     [Fact]
-    public void Enqueue_ShouldAddElementsToQueue()
+    public void Enqueue_ShouldAddElementsToQueue() 
     {
         var queue = new MyQueue(3);
         queue.Enqueue(10);

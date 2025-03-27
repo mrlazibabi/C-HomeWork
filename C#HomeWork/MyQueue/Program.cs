@@ -23,7 +23,7 @@ public class MyQueue
         Tail = -1;
     }
 
-    public void Enqueue(int item)
+    public void Enqueue(int item) 
     {
         if (Tail == MaxQueue - 1)
         {
