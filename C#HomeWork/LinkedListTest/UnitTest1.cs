@@ -14,64 +14,73 @@ public class LinkedListTests
     [Fact]
     public void InsertHead_ShouldInsertNodeAtHead()
     {
-        list.InsertHead(10);
+        Node node = new Node(10);
+        list.InsertHead(node);
         Assert.Equal(10, list.Head.DataOfNode);
+        Assert.Equal(10, list.Tail.DataOfNode); 
     }
 
     [Fact]
-    public void InsertHead_EmptyList_ShouldSetHead()
+    public void InsertHead_EmptyList_ShouldSetHeadAndTail()
     {
-        list.InsertHead(5);
+        Node node = new Node(5);
+        list.InsertHead(node);
         Assert.Equal(5, list.Head.DataOfNode);
+        Assert.Equal(5, list.Tail.DataOfNode);
         Assert.Null(list.Head.Next);
     }
 
     [Fact]
     public void InsertTail_ShouldInsertNodeAtTail()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        Node node = new Node(20);
+        list.InsertTail(node);
         Assert.Equal(20, list.GetTail().DataOfNode);
+        Assert.Equal(20, list.Tail.DataOfNode); 
     }
 
     [Fact]
-    public void InsertTail_EmptyList_ShouldSetHead()
+    public void InsertTail_EmptyList_ShouldSetHeadAndTail()
     {
-        list.InsertTail(5);
+        Node node = new Node(5);
+        list.InsertTail(node);
         Assert.Equal(5, list.Head.DataOfNode);
+        Assert.Equal(5, list.Tail.DataOfNode);
         Assert.Null(list.Head.Next);
     }
 
     [Fact]
     public void InsertAfter_ShouldInsertNodeCorrectly()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
-        list.InsertAfter(10, 15);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
+        list.InsertAfter(10, new Node(15));
         Assert.Equal(15, list.Head.Next.DataOfNode);
     }
 
     [Fact]
-    public void InsertAfter_AtTail_ShouldInsertCorrectly()
+    public void InsertAfter_AtTail_ShouldInsertCorrectlyAndUpdateTail()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
-        list.InsertAfter(20, 30);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
+        list.InsertAfter(20, new Node(30));
         Assert.Equal(30, list.GetTail().DataOfNode);
+        Assert.Equal(30, list.Tail.DataOfNode); 
     }
 
     [Fact]
     public void InsertAfter_TargetNotFound_ShouldThrow()
     {
-        list.InsertHead(10);
-        Assert.Throws<InvalidOperationException>(() => list.InsertAfter(20, 15));
+        list.InsertHead(new Node(10));
+        Assert.Throws<InvalidOperationException>(() => list.InsertAfter(20, new Node(15)));
     }
 
     [Fact]
     public void InsertBefore_ShouldInsertNodeBeforeTarget()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         list.InsertBefore(20, 15);
         Assert.Equal(15, list.Head.Next.DataOfNode);
     }
@@ -85,7 +94,7 @@ public class LinkedListTests
     [Fact]
     public void InsertBefore_TargetNotFound_ShouldThrow()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         Assert.Throws<InvalidOperationException>(() => list.InsertBefore(20, 15));
     }
 
@@ -93,10 +102,11 @@ public class LinkedListTests
     [Fact]
     public void RemoveHead_ShouldRemoveHeadNode()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         list.RemoveHead();
         Assert.Equal(20, list.Head.DataOfNode);
+        Assert.Equal(20, list.Tail.DataOfNode); 
     }
 
     [Fact]
@@ -104,23 +114,26 @@ public class LinkedListTests
     {
         list.RemoveHead();
         Assert.True(list.IsEmpty());
+        Assert.Null(list.Tail);
     }
 
     [Fact]
     public void RemoveHead_SingleNode_ShouldEmptyList()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         list.RemoveHead();
         Assert.Null(list.Head);
+        Assert.Null(list.Tail); 
     }
 
     [Fact]
     public void RemoveTail_ShouldRemoveLastNode()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         list.RemoveTail();
         Assert.Null(list.Head.Next);
+        Assert.Equal(10, list.Tail.DataOfNode); 
     }
 
     [Fact]
@@ -128,23 +141,26 @@ public class LinkedListTests
     {
         list.RemoveTail();
         Assert.True(list.IsEmpty());
+        Assert.Null(list.Tail); 
     }
 
     [Fact]
     public void RemoveTail_SingleNode_ShouldEmptyList()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         list.RemoveTail();
         Assert.Null(list.Head);
+        Assert.Null(list.Tail); 
     }
 
     [Fact]
     public void Remove_ShouldRemoveTargetNode()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         list.Remove(10);
         Assert.Equal(20, list.Head.DataOfNode);
+        Assert.Equal(20, list.Tail.DataOfNode); 
     }
 
     [Fact]
@@ -152,33 +168,36 @@ public class LinkedListTests
     {
         list.Remove(10);
         Assert.True(list.IsEmpty());
+        Assert.Null(list.Tail); 
     }
 
     [Fact]
     public void Remove_ValueNotFound_ShouldDoNothing()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         list.Remove(20);
         Assert.Equal(10, list.Head.DataOfNode);
+        Assert.Equal(10, list.Tail.DataOfNode); 
         Assert.Null(list.Head.Next);
     }
 
     [Fact]
     public void Remove_MiddleNode_ShouldRemoveCorrectly()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
-        list.InsertTail(30);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
+        list.InsertTail(new Node(30));
         list.Remove(20);
         Assert.Equal(30, list.Head.Next.DataOfNode);
+        Assert.Equal(30, list.Tail.DataOfNode); 
     }
 
     // Search/Access Operations
     [Fact]
     public void Search_ShouldReturnCorrectNode()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         var node = list.Search(20);
         Assert.NotNull(node);
         Assert.Equal(20, node.DataOfNode);
@@ -187,7 +206,7 @@ public class LinkedListTests
     [Fact]
     public void Search_ValueNotFound_ShouldReturnNull()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         var node = list.Search(20);
         Assert.Null(node);
     }
@@ -202,15 +221,15 @@ public class LinkedListTests
     [Fact]
     public void GetNode_ShouldReturnCorrectNode()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
         Assert.Equal(20, list.GetNode(1).DataOfNode);
     }
 
     [Fact]
     public void GetNode_NegativeIndex_ShouldThrow()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         Assert.Throws<ArgumentOutOfRangeException>(() => list.GetNode(-1));
     }
 
@@ -223,7 +242,7 @@ public class LinkedListTests
     [Fact]
     public void GetNode_ShouldThrowForOutOfRange()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         Assert.Throws<ArgumentOutOfRangeException>(() => list.GetNode(2));
     }
 
@@ -237,15 +256,16 @@ public class LinkedListTests
     public void GetTail_EmptyList_ShouldReturnNull()
     {
         Assert.Null(list.GetTail());
+        Assert.Null(list.Tail); 
     }
 
     // Utility Operations
     [Fact]
     public void Count_ShouldReturnCorrectCount()
     {
-        list.InsertHead(10);
-        list.InsertTail(20);
-        list.InsertTail(30);
+        list.InsertHead(new Node(10));
+        list.InsertTail(new Node(20));
+        list.InsertTail(new Node(30));
         Assert.Equal(3, list.Count());
     }
 
@@ -258,8 +278,9 @@ public class LinkedListTests
     [Fact]
     public void Clear_ShouldMakeListEmpty()
     {
-        list.InsertHead(10);
+        list.InsertHead(new Node(10));
         list.Clear();
         Assert.True(list.IsEmpty());
+        Assert.Null(list.Tail); 
     }
 }

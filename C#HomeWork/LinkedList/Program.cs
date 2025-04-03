@@ -1,38 +1,179 @@
 ﻿LinkedList linkedList = new LinkedList();
-
 public class LinkedList
 {
     public Node Head { get; set; }
+    public Node Tail { get; set; } 
 
-    public void InsertHead(int value)
+    public void InsertHead(Node node)
     {
-        Node newNode = new Node(value);
-        newNode.Next = Head;
-        Head = newNode;
+        node.Next = Head;
+        Head = node;
+        if (Tail == null) //If list empty, set Tail to new node
+        {
+            Tail = node;
+        }
     }
 
-    public void Traverse()
+    public void InsertTail(Node node)
     {
-        Node current = Head;
-
-        while (current is not null)
+        if (Head is null)
         {
-            Console.WriteLine(current.DataOfNode);
+            Head = node;
+            Tail = node;
+            return;
+        }
+
+        Tail.Next = node;
+        Tail = node;
+    }
+
+    public void InsertAfter(int target, Node node)
+    {
+        Node targetNode = Search(target);
+
+        if (targetNode is null)
+        {
+            throw new InvalidOperationException($"Cannot find node with value {target}");
+        }
+
+        node.Next = targetNode.Next;
+        targetNode.Next = node;
+
+        if (targetNode == Tail)
+        {
+            Tail = node;
+        }
+    }
+
+    public void InsertBefore(int target, int value)
+    {
+        if (Head is null)
+        {
+            throw new InvalidOperationException("List is empty");
+        }
+
+        if (Head.DataOfNode == target)
+        {
+            InsertHead(new Node(value));
+            return;
+        }
+
+        Node current = Head;
+        while (current.Next is not null)
+        {
+            if (current.Next.DataOfNode == target)
+            {
+                Node newNode = new Node(value);
+                newNode.Next = current.Next;
+                current.Next = newNode;
+                return;
+            }
+            current = current.Next;
+        }
+
+        throw new InvalidOperationException($"Cannot find node with value {target}");
+    }
+
+    public void RemoveHead()
+    {
+        if (Head is null)
+        {
+            return;
+        }
+        Head = Head.Next;
+        if (Head is null) 
+        {
+            Tail = null;
+        }
+    }
+
+    public void RemoveTail()
+    {
+        if (Head is null)
+        {
+            return;
+        }
+
+        if (Head.Next is null)
+        {
+            Head = null;
+            Tail = null;
+            return;
+        }
+
+        Node current = Head;
+        while (current.Next.Next is not null)
+        {
+            current = current.Next;
+        }
+        current.Next = null;
+        Tail = current; 
+    }
+
+    public void Remove(int target)
+    {
+        if (Head is null)
+        {
+            return;
+        }
+
+        if (Head.DataOfNode == target)
+        {
+            Head = Head.Next;
+            if (Head is null)
+            {
+                Tail = null;
+            }
+            return;
+        }
+
+        Node current = Head;
+        while (current.Next is not null)
+        {
+            if (current.Next.DataOfNode == target)
+            {
+                current.Next = current.Next.Next;
+                if (current.Next is null)
+                {
+                    Tail = current;
+                }
+                return;
+            }
             current = current.Next;
         }
     }
 
-    public int Count()
+    public Node GetHead()
     {
-        int count = 0;
+        return Head;
+    }
+
+    public Node GetTail()
+    {
+        return Tail;
+    }
+
+    public Node GetNode(int index)
+    {
+        if (index < 0)
+        {
+            throw new ArgumentOutOfRangeException("Index cannot be negative");
+        }
+
         Node current = Head;
+        int currentIndex = 0;
 
         while (current is not null)
         {
-            count++;
+            if (currentIndex == index)
+            {
+                return current;
+            }
             current = current.Next;
+            currentIndex++;
         }
-        return count;
+
+        throw new ArgumentOutOfRangeException("Index out of range");
     }
 
     public Node Search(int value)
@@ -58,164 +199,31 @@ public class LinkedList
     public void Clear()
     {
         Head = null;
+        Tail = null;
     }
 
-    public void InsertTail(int value)
+    public void Traverse()
     {
-        Node newNode = new Node(value);
-        if (Head is null)
-        {
-            Head = newNode;
-            return;
-        }
-
         Node current = Head;
-        while (current.Next is not null)
-        {
-            current = current.Next;
-        }
-        current.Next = newNode;
-    }
-
-    public void InsertAfter(int target, int value)
-    {
-        Node targetNode = Search(target);
-
-        if (targetNode is null)
-        {
-            throw new InvalidOperationException($"Cannot find node with value {target}");
-        }
-
-        Node newNode = new Node(value);
-        newNode.Next = targetNode.Next;
-        targetNode.Next = newNode;
-    }
-
-    public void RemoveHead()
-    {
-        if (Head is null)
-        {
-            return;
-        }
-        Head = Head.Next;
-    }
-
-    public void Remove(int target)
-    {
-        if (Head is null)
-        {
-            return;
-        }
-
-        if (Head.DataOfNode == target)
-        {
-            Head = Head.Next;
-            return;
-        }
-
-        Node current = Head;
-        while (current.Next is not null)
-        {
-            if (current.Next.DataOfNode == target)
-            {
-                current.Next = current.Next.Next;
-                return;
-            }
-            current = current.Next;
-        }
-    }
-
-    public Node GetHead()
-    {
-        return Head;
-    }
-
-    public Node GetTail()
-    {
-        if (Head is null)
-        {
-            return null;
-        }
-
-        Node current = Head;
-        while (current.Next is not null)
-        {
-            current = current.Next;
-        }
-        return current;
-    }
-
-    public void InsertBefore(int target, int value)
-    {
-        if (Head is null)
-        {
-            throw new InvalidOperationException("List is empty");
-        }
-
-        if (Head.DataOfNode == target)
-        {
-            InsertHead(value);
-            return;
-        }
-
-        Node current = Head;
-        while (current.Next is not null)
-        {
-            if (current.Next.DataOfNode == target)
-            {
-                Node newNode = new Node(value);
-                newNode.Next = current.Next;
-                current.Next = newNode;
-                return;
-            }
-            current = current.Next;
-        }
-
-        throw new InvalidOperationException($"Cannot find node with value {target}");
-    }
-
-    public void RemoveTail()
-    {
-        if (Head is null)
-        {
-            return;
-        }
-
-        if (Head.Next is null)
-        {
-            Head = null;
-            return;
-        }
-
-        Node current = Head;
-        while (current.Next.Next is not null)
-        {
-            current = current.Next;
-        }
-        current.Next = null;
-    }
-
-    public Node GetNode(int index)
-    {
-        if (index < 0)
-        {
-            throw new ArgumentOutOfRangeException("Index cannot be negative");
-        }
-
-        Node current = Head;
-        int currentIndex = 0;
 
         while (current is not null)
         {
-            if (currentIndex == index)
-            {
-                return current;
-            }
+            Console.WriteLine(current.DataOfNode);
             current = current.Next;
-            currentIndex++;
         }
+    }
 
-        throw new ArgumentOutOfRangeException("Index out of range");
+    public int Count()
+    {
+        int count = 0;
+        Node current = Head;
+
+        while (current is not null)
+        {
+            count++;
+            current = current.Next;
+        }
+        return count;
     }
 }
 
