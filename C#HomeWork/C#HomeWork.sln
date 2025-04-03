@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homework.csproj", "{77FE37FB-466E-4364-B770-438F8565CAFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework", "Homework\Homework.csproj", "{77FE37FB-466E-4364-B770-438F8565CAFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{70DC4BBF-947B-48E6-B171-88255B106BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListTests", "LinkedListTest\LinkedListTests.csproj", "{CFC56E7F-C32C-4D0F-849D-46A7A71970CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{77FE37FB-466E-4364-B770-438F8565CAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77FE37FB-466E-4364-B770-438F8565CAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77FE37FB-466E-4364-B770-438F8565CAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DC4BBF-947B-48E6-B171-88255B106BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DC4BBF-947B-48E6-B171-88255B106BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DC4BBF-947B-48E6-B171-88255B106BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DC4BBF-947B-48E6-B171-88255B106BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC56E7F-C32C-4D0F-849D-46A7A71970CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC56E7F-C32C-4D0F-849D-46A7A71970CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC56E7F-C32C-4D0F-849D-46A7A71970CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC56E7F-C32C-4D0F-849D-46A7A71970CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
