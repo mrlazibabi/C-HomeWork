@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "LinkedList\\LinkedList.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MyQueue2\\MyQueue2.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

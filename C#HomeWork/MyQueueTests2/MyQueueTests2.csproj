@@ -13,7 +13,10 @@
 		<CoverletOutputFormat>cobertura</CoverletOutputFormat>
 		<CoverletOutput>$(MSBuildProjectDirectory)/TestResults/coverage.xml</CoverletOutput>
 		<SkipAutoProps>true</SkipAutoProps>
-		<Include>[LinkedList]*</Include>
+		<!-- Only include the Queue class in coverage -->
+		<Include>[LinkedList]Queue</Include>
+		<!-- Exclude LinkedList class to focus on Queue -->
+		<Exclude>[LinkedList]LinkedList</Exclude>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -29,7 +32,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LinkedList\LinkedList.csproj" />
+	  <ProjectReference Include="..\MyQueue2\MyQueue2.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
