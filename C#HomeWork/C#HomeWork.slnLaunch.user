@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DoublyLinkedList\\DoublyLinkedList.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "DLL_Stack\\DLL_Stack.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

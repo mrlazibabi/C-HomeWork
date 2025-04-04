@@ -1,39 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
 DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
-//doublyLinkedList.Head = new Node(1);
-//doublyLinkedList.Head.Next = new Node(3);
-//doublyLinkedList.Head.Next.Previous = doublyLinkedList.Head;
-//doublyLinkedList.Head.Next.Next = new Node(2);
-//doublyLinkedList.Head.Next.Next.Previous = doublyLinkedList.Head.Next;
-
-//Console.Write("Before: ");
-//doublyLinkedList.Traverse();
-//doublyLinkedList.InsertHead(5);
-//doublyLinkedList.InsertTail(4);
-//Console.Write("After: ");
-//doublyLinkedList.Traverse();
-//Console.WriteLine("==============");
-
-//Node search = doublyLinkedList.Search(3);
-//Console.WriteLine(search);
-
-
-//Console.WriteLine(doublyLinkedList.Count());
-//Console.WriteLine("==============");
-
-//doublyLinkedList.InsertAfter(3, 6);
-//doublyLinkedList.Traverse();
-//Console.WriteLine("==============");
-
-//doublyLinkedList.RemoveHead();
-//doublyLinkedList.Traverse();
-//Console.WriteLine("==============");
-
-//doublyLinkedList.Remove(6);
-//doublyLinkedList.Traverse();
-
-
 public class DoublyLinkedList
 {
     public Node Head { get; set; } // Mặc định nó sẽ null
