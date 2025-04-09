@@ -1,27 +1,146 @@
 ﻿Tree tree = new Tree();
 
-// Insert the values as per the exercise
+//Build tree
 int[] values = { 8, 3, 10, 1, 6, 14, 4, 7, 13 };
-foreach (int value in values)
-{
-    tree.InsertNode(value);
-}
+tree.BuildTreeFromArray(values);
 
-Console.WriteLine("NLR Traversal:");
+// Count
+Console.WriteLine($"The tree has {tree.Count()} nodes in total.");
+Console.WriteLine(); 
+
+// Search 
+int searchValue = 6;
+Node foundNode = tree.FindNode(searchValue);
+if (foundNode != null)
+{
+    Console.WriteLine($"The value {foundNode.Value} exists in the tree.");
+}
+else
+{
+    Console.WriteLine($"The value {searchValue} was not found in the tree.");
+}
+Console.WriteLine(); 
+
+// Find min
+Node minNode = tree.FindMin();
+if (minNode != null)
+{
+    Console.WriteLine($"The smallest value is {minNode.Value}.");
+}
+else
+{
+    Console.WriteLine("The tree is empty.");
+}
+Console.WriteLine(); 
+
+// Find max
+Node maxNode = tree.FindMax();
+if (maxNode != null)
+{
+    Console.WriteLine($"The largest value is {maxNode.Value}.");
+}
+else
+{
+    Console.WriteLine("The tree is empty.");
+}
+Console.WriteLine(); 
+
+// Cal Height
+int height = tree.CalculateHeight();
+Console.WriteLine($"The tree's height is {height}");
+Console.WriteLine(); 
+
+Console.Write("Values in order: ");
 tree.TraverseNLR(tree.Root);
-Console.WriteLine("\nLNR Traversal:");
-tree.TraverseLNR(tree.Root);
-Console.WriteLine("\nLRN Traversal:");
-tree.TraverseLRN(tree.Root);
-Console.WriteLine("\nRNL Traversal:");
-tree.TraverseRNL(tree.Root);
-Console.WriteLine("\nRLN Traversal:");
-tree.TraverseRLN(tree.Root);
+Console.WriteLine(); 
+Console.WriteLine(); 
 
 class Tree
 {
     public Node Root { get; set; }
 
+    // 1. Count the number of nodes
+    public int Count()
+    {
+        return Count(Root);
+    }
+
+    private int Count(Node node)
+    {
+        if (node == null)
+            return 0;
+        return 1 + Count(node.Left) + Count(node.Right);
+    }
+
+    // 2. Find a node with the given value
+    public Node FindNode(int value)
+    {
+        return FindNode(Root, value);
+    }
+
+    private Node FindNode(Node node, int value)
+    {
+        if (node == null)
+            return null;
+        if (value == node.Value)
+            return node;
+        if (value < node.Value)
+            return FindNode(node.Left, value);
+        return FindNode(node.Right, value);
+    }
+
+    // 3. Find the minimum value node
+    public Node FindMin()
+    {
+        if (Root == null)
+            return null;
+        Node current = Root;
+        while (current.Left != null)
+        {
+            current = current.Left;
+        }
+        return current;
+    }
+
+    // 4. Find the maximum value node
+    public Node FindMax()
+    {
+        if (Root == null)
+            return null;
+        Node current = Root;
+        while (current.Right != null)
+        {
+            current = current.Right;
+        }
+        return current;
+    }
+
+    // 5. Build tree from an array
+    public void BuildTreeFromArray(int[] values)
+    {
+        Root = null; // Clear the current tree
+        foreach (int value in values)
+        {
+            InsertNode(value);
+        }
+    }
+
+    // 6. Calculate the height of the tree
+    public int CalculateHeight()
+    {
+        return CalculateHeight(Root);
+    }
+
+    private int CalculateHeight(Node node)
+    {
+        if (node == null)
+            return 0;
+        int leftHeight = CalculateHeight(node.Left);
+        int rightHeight = CalculateHeight(node.Right);
+        return 1 + Math.Max(leftHeight, rightHeight);
+    }
+
+    // Existing methods (InsertNode, traversals, etc.)
     public void InsertNode(int value)
     {
         if (Root == null)
