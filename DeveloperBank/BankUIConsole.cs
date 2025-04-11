@@ -12,7 +12,7 @@
             bankQueueManager = new BankQueueManager();
         }
 
-        public void InputCustomerAndAddToTheQueue()
+        public void InputCustomerAndAddToTheQueue() 
         {
             Console.WriteLine("=== Thêm khách hàng vào hàng đợi ===");
             Console.WriteLine("Nhập thông tin khách hàng:\n");

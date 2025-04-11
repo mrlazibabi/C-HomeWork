@@ -6,3 +6,4 @@
     public int VIPQueueCount { get; set; }
     public int EconomyQueueCount { get; set; }
 }
+ 

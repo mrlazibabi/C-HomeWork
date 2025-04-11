@@ -5,3 +5,4 @@
     public decimal WithDrawalAmount { get; set; }
     public int TransactionNumber { get; set; }
 }
+ 

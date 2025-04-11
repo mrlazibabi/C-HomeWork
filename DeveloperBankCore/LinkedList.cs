@@ -83,7 +83,7 @@ public class LinkedList
     }
 }
 
-public class Node
+public class Node 
 {
     public Customer DataOfNode { get; set; }
     public Node NextNode { get; set; }

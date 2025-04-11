@@ -21,7 +21,7 @@ public class BankController
         Console.WriteLine("2. Gọi tên khách hàng VIP tiếp theo");
         Console.WriteLine("3. Gọi tên khách hàng Thường tiếp theo");
         Console.WriteLine("4. Hiển thị khách hàng sắp tới");
-        Console.WriteLine("5. Thống kê");
+        Console.WriteLine("5. Thống kê"); 
         Console.WriteLine("6. Tìm giao dịch theo số giao dịch");
         Console.WriteLine("7. Thoát chương trình");
         Console.Write("Nhập lựa chọn của bạn: ");

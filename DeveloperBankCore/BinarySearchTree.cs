@@ -41,7 +41,7 @@ namespace DeveloperBankCore
             else if (transactionNum < node.DataOfNode.TransactionNumber)
                 return SearchRec(node.Left, transactionNum);
             else
-                return SearchRec(node.Right, transactionNum);
+                return SearchRec(node.Right, transactionNum); 
         }
     }
 
