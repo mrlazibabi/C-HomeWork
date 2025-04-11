@@ -4,30 +4,82 @@
 public class LinkedList
 {
     public Node Head { get; set; }
+    public Node Tail { get; set; }
+    private int count;
 
     public void InsertNodeToLast(Node node)
     {
-        throw new NotImplementedException();
+        if (Tail == null)
+        {
+            Head = Tail = node;
+        }
+        else
+        {
+            Tail.NextNode = node;
+            Tail = node;
+        }
+        count++;
     }
 
     public Node GetFirstNodeAndRemove()
     {
-        throw new NotImplementedException();
+        if (Head == null) return null;
+
+        Node firstNode = Head;
+        Head = Head.NextNode;
+
+        if (Head == null)
+        {
+            Tail = null;
+        }
+
+        count--;
+        return firstNode;
     }
 
     public Node[] GetFirstThreeNode()
     {
-        throw new NotImplementedException();
+        int size = Math.Min(3, count);
+        if (size == 0) return null;
+
+        Node[] result = new Node[size];
+        Node current = Head;
+
+        for (int i = 0; i < size; i++)
+        {
+            result[i] = current;
+            current = current.NextNode;
+        }
+        return result;
+    }
+
+    public Node[] GetAllNode()
+    {
+        Node[] result = new Node[count];
+        Node current = Head;
+        for (int i = 0; i < count; i++)
+        {
+            result[i] = current;
+            current = current.NextNode;
+        }
+        return result;
     }
 
     public int Count()
     {
-        throw new NotImplementedException();
+        return count;
     }
 
     public decimal TotalAmount()
     {
-        throw new NotImplementedException();
+        decimal totalAmount = 0;
+        Node current = Head;
+        while (current != null)
+        {
+            totalAmount += current.DataOfNode.WithDrawalAmount;
+            current = current.NextNode;
+        }
+        return totalAmount;
     }
 }
 

@@ -7,14 +7,22 @@ public class Queue
 
     public Queue()
     {
-        QueueData = new LinkedList(); // khởi tạo chỗ chứa dữ liệu queue
+        QueueData = new LinkedList();
     }
 
-    public int Count => QueueData.Count(); // số lượng khách hàng trong queue
+    public int Count => QueueData.Count();
 
     public void Enqueue(Customer customer)
     {
-        // TODO: Thêm customer vào cuối hàng đợi.
+        if (QueueData.Count() > 0)
+        {
+            customer.Number = QueueData.Tail.DataOfNode.Number + 1;
+        }
+        else
+        {
+            customer.Number = 1;
+        }
+
         Node newNode = new Node
         {
             DataOfNode = customer,
@@ -25,23 +33,39 @@ public class Queue
 
     public Customer Dequeue()
     {
-        // TODO: Lấy và xóa khách hàng ở đầu hàng đợi.
+        if (QueueData.Count() == 0) return null;
         Node node = QueueData.GetFirstNodeAndRemove();
-       
-        throw new NotImplementedException();
+        return node.DataOfNode;
     }
-
 
     public Customer[] GetFirst3Node()
     {
-        // TODO: lấy ra 3 phần tử gần nhất trong queue
-        Node[] nextThreeCustomer = QueueData.GetFirstThreeNode();
-        throw new NotImplementedException();
+        Node[] nextThreeNode = QueueData.GetFirstThreeNode();
+        if (nextThreeNode == null) return null;
+
+        Customer[] nextThreeCustomer = new Customer[nextThreeNode.Length];
+        for (int i = 0; i < nextThreeNode.Length; i++)
+        {
+            nextThreeCustomer[i] = nextThreeNode[i].DataOfNode;
+        }
+        return nextThreeCustomer;
+    }
+
+    public Customer[] GetAllNode()
+    {
+        Node[] allNode = QueueData.GetAllNode();
+        if (allNode == null) return null;
+
+        Customer[] allCustomer = new Customer[allNode.Length];
+        for (int i = 0; i < allNode.Length; i++)
+        {
+            allCustomer[i] = allNode[i].DataOfNode;
+        }
+        return allCustomer;
     }
 
     public decimal CalculatedMoneyInQueue()
     {
-        // TODO: Tổng tiền trong queue
-        throw new NotImplementedException();
+        return QueueData.TotalAmount();
     }
 }
