@@ -9,7 +9,7 @@ public class BankQueueManager
 {
     //private const string DATA_DIRECTORY = "Data";
     private const string ECO_FILE_PATH_JSON = @".\EcoQueue.json";
-    private const string VIP_FILE_PATH_JSON = @".\VIPQueue.json";
+    private const string VIP_FILE_PATH_JSON = @".\VIPQueue.json"; 
     private const string REPORT_FILE_PATH_JSON = @".\Report.json";
 
     private JsonSerializerOptions serializerOptions = new JsonSerializerOptions { WriteIndented = true };

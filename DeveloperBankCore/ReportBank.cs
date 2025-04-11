@@ -5,3 +5,4 @@
     public decimal TotalAmountCashOut { get; set; } 
     public decimal TotalAmountInQueue { get; set; } 
 }
+ 
