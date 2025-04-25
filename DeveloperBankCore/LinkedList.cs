@@ -1,7 +1,7 @@
 ﻿/// <summary>
 /// Cấu trúc chứa dữ liệu thực sự
 /// </summary>
-public class LinkedList
+public class LinkedList : ILinkedList
 {
     public Node Head { get; set; }
     public Node Tail { get; set; }

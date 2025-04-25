@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DeveloperBankCore
 {
-    public class BinarySearchTree
+    public class BinarySearchTree : IBinarySearchTree
     {
         private BSTNode root;
 
@@ -41,7 +41,7 @@ namespace DeveloperBankCore
             else if (transactionNum < node.DataOfNode.TransactionNumber)
                 return SearchRec(node.Left, transactionNum);
             else
-                return SearchRec(node.Right, transactionNum); 
+                return SearchRec(node.Right, transactionNum);
         }
     }
 
