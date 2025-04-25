@@ -1,18 +1,29 @@
 ﻿namespace DeveloperBank
 {
+    public interface IBankUIConsole
+    {
+        void DisplayNextEconomyCustomer();
+        void DisplayNextReadyCustomer();
+        void DisplayNextVIPCustomer();
+        void DisplayReport();
+        void InputCustomerAndAddToTheQueue();
+        void LoadFiles();
+        void SearchTransaction();
+    }
+
     /// <summary>
     /// Class này dùng để người dùng tương tác với dữ liệu và gửi yêu cầu tới BankQueueManager nơi xử lý logic
     /// </summary>
-    public class BankUIConsole
+    public class BankUIConsole : IBankUIConsole
     {
-        private BankQueueManager bankQueueManager;
+        public IBankQueueManager bankQueueManager;
 
         public BankUIConsole()
         {
             bankQueueManager = new BankQueueManager();
         }
 
-        public void InputCustomerAndAddToTheQueue() 
+        public void InputCustomerAndAddToTheQueue()
         {
             Console.WriteLine("=== Thêm khách hàng vào hàng đợi ===");
             Console.WriteLine("Nhập thông tin khách hàng:\n");

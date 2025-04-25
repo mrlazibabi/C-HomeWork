@@ -7,7 +7,7 @@ using System.Text.Json;
 /// </summary>
 public class BankController
 {
-    private BankUIConsole bankUIConsole;
+    public IBankUIConsole bankUIConsole;
 
     public BankController()
     {

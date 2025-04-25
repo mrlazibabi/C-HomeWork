@@ -1,7 +1,7 @@
 ﻿/// <summary>
 /// Logic queue, thêm vào cuối bốc ra đầu
 /// </summary>
-public class Queue
+public class Queue : IQueue
 {
     public LinkedList QueueData { get; set; }
 

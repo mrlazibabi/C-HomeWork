@@ -1,8 +1,8 @@
-﻿public class Customer
+﻿public class Customer : CustomerBase
 {
-    public int Number { get; set; }
-    public string FullName { get; set; }
-    public decimal WithDrawalAmount { get; set; }
-    public int TransactionNumber { get; set; }
+    public override int Number { get; set; }
+    public override string FullName { get; set; }
+    public override decimal WithDrawalAmount { get; set; }
+    public override int TransactionNumber { get; set; }
 }
  
