@@ -1,62 +1,21 @@
 ﻿using System.Collections;
 
-SingleLinkedList<int> list = new SingleLinkedList<int>();
-
-// Test Add and ToArray
-list.Add(1);
-list.Add(2);
-list.Add(3);
-Console.WriteLine($"Add: {string.Join(", ", list.ToArray())}"); // Expected: 1, 2, 3
-Console.WriteLine($"Count: {list.Count}"); // Expected: 3
-
-// Test Insert
-list.Insert(1, 4); // List: 1 -> 4 -> 2 -> 3
-Console.WriteLine($"Insert: {string.Join(", ", list.ToArray())}"); // Expected: 1, 4, 2, 3
-
-// Test Contains and IndexOf
-Console.WriteLine($"Contains 4: {list.Contains(4)}"); // Expected: True
-Console.WriteLine($"IndexOf 4: {list.IndexOf(4)}"); // Expected: 1
-
-// Test Remove
-list.Remove(4); // List: 1 -> 2 -> 3
-Console.WriteLine($"Remove 4: {string.Join(", ", list.ToArray())}"); // Expected: 1, 2, 3
-
-// Test RemoveAt
-list.RemoveAt(0); // List: 2 -> 3
-Console.WriteLine($"RemoveAt 0: {string.Join(", ", list.ToArray())}"); // Expected: 2, 3
-
-// Test Clear
-list.Clear();
-Console.WriteLine($"Clear: {string.Join(", ", list.ToArray())}"); // Expected: (empty)
-Console.WriteLine($"Count: {list.Count}"); // Expected: 0
-
-public interface ISingleLinkedList<T>
+public interface ISingleLinkedList<K>
 {
-    void Add(T item);
+    void Add(K item);
     void Clear();
-    bool Contains(T item);
-    int IndexOf(T item);
-    void Insert(int index, T item);
-    void Remove(T item);
+    bool Contains(K item);
+    int IndexOf(K item);
+    void Insert(int index, K item);
+    bool Remove(K item);
     void RemoveAt(int index);
-    T[] ToArray();
+    K[] ToArray();
     int Count { get; }
 }
 
-public class Node<T>
+public class SingleLinkedList<K> : ISingleLinkedList<K>, ICollection<K>
 {
-    public T Value { get; set; }
-    public Node<T>? Next { get; set; } 
-    public Node(T value)
-    {
-        Value = value;
-        Next = null;
-    }
-}
-
-public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
-{
-    private Node<K>? _head; 
+    private Node<K>? _head;
     private int _count;
 
     public SingleLinkedList()
@@ -66,6 +25,8 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
     }
 
     public int Count { get { return _count; } }
+
+    public bool IsReadOnly => false;
 
     public void Add(K item)
     {
@@ -143,7 +104,7 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
             current = current.Next;
             index++;
         }
-        return -1; //không tìm thấy
+        return -1;
     }
 
     public void Insert(int index, K item)
@@ -176,11 +137,11 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
         _count++;
     }
 
-    public void Remove(K item)
+    public bool Remove(K item)
     {
         if (_head == null)
         {
-            return;
+            return false;
         }
         if (item == null)
         {
@@ -190,7 +151,7 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
         {
             _head = _head.Next;
             _count--;
-            return;
+            return true;
         }
 
         Node<K> current = _head;
@@ -200,10 +161,11 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
             {
                 current.Next = current.Next.Next;
                 _count--;
-                return;
+                return true;
             }
             current = current.Next;
         }
+        return false;
     }
 
     public void RemoveAt(int index)
@@ -249,6 +211,27 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
         return result;
     }
 
+    public void CopyTo(K[] array, int arrayIndex)
+    {
+        if (_head == null)
+        {
+            throw new InvalidOperationException("The list is empty");
+        }
+        if (arrayIndex < 0 || arrayIndex >= array.Length)
+        {
+            throw new ArgumentOutOfRangeException("arrayIndex is out of range");
+        }
+
+        Node<K> current = _head;
+        int i = arrayIndex;
+        while (current != null && i < array.Length)
+        {
+            array[i] = current.Value;
+            current = current.Next;
+            i++;
+        }
+    }
+
     public IEnumerator<K> GetEnumerator()
     {
         return new Enumerator(this);
@@ -262,7 +245,7 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
     public struct Enumerator : IEnumerator<K>
     {
         private readonly SingleLinkedList<K> _list;
-        private Node<K>? _current; 
+        private Node<K>? _current;
         private int _index;
 
         internal Enumerator(SingleLinkedList<K> list)
@@ -277,10 +260,7 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
             get
             {
                 if (_current == null || _index == 0)
-                {
                     throw new InvalidOperationException("Enumerator chưa được khởi tạo hoặc đã kết thúc.");
-                }
-                    
                 return _current.Value;
             }
         }
@@ -290,10 +270,7 @@ public class SingleLinkedList<K> : ISingleLinkedList<K>, IEnumerable<K>
             get
             {
                 if (_current == null || _index == 0)
-                {
                     throw new InvalidOperationException("Enumerator chưa được khởi tạo hoặc đã kết thúc.");
-                }
-                
                 return _current.Value;
             }
         }

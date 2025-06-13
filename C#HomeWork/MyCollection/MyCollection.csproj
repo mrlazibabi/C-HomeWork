@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Node\Node.csproj" />
+    <ProjectReference Include="..\SingleLinkedList\SingleLinkedList.csproj" />
   </ItemGroup>
 
 </Project>
