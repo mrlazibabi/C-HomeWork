@@ -4,7 +4,7 @@ ListHelper listHelper = new ListHelper();
 List<string> fruits = new List<string> { "apple", "banana", "cherry", "jackfruit" };
 
 List<string> skipFirstTwo = fruits.Take(2).ToList();
-skipFirstTwo.Dump("List after skipping 2:");
+skipFirstTwo.Dump("List after taking first 2:");
 
 
 Dictionary<string, double> books = new Dictionary<string, double>
@@ -17,7 +17,7 @@ Dictionary<string, double> books = new Dictionary<string, double>
 List<KeyValuePair<string, double>> bookList = books.ToList();
 List<KeyValuePair<string, double>> skippedBook = bookList.Take(2).ToList();
 
-skippedBook.Dump($"List after skipping 2:");
+skippedBook.Dump($"List after taking first 2:");
 
 class ListHelper
 {
