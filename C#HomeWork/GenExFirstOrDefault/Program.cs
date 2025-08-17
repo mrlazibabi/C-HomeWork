@@ -8,7 +8,7 @@ Console.WriteLine(firstNumber2);
 
 public static class ListExtensions
 {
-    public static T FirstOrDefault<T>(this List<T> list, Predicate<T> predicate)
+    public static T FirstOrDefault<T>(this List<T> list, Func<T,bool> predicate)
     {
         if (list == null || list.Count == 0)
         {
@@ -19,11 +19,11 @@ public static class ListExtensions
             throw new ArgumentNullException(nameof(predicate), "Predicate cannot be null.");
         }
 
-        foreach (var item in list)
+        for(int i = 0; i < list.Count; i++)
         {
-            if (predicate(item))
+            if (predicate(list[i]))
             {
-                return item;
+                return list[i];
             }
         }
         return default(T);
