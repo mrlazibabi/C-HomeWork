@@ -2,25 +2,25 @@
 
 public class Authen
 {
-    private List<string> usernames = new List<string>();
+    private List<string> emails = new List<string>();
     private List<string> passwords = new List<string>();
     
-    public bool Register(string username, string password)
+    public bool Register(string eamil, string password)
     {
-        if (usernames.Contains(username))
+        if (emails.Contains(eamil))
         {
             return false; 
         }
         string salt = GenerateSalt();
         string hashedPassword = HashPassword(password, salt);
-        usernames.Add(username);
+        emails.Add(eamil);
         passwords.Add(hashedPassword + ":" + salt); 
         return true;
     }
 
-    public bool Login(string username, string password)
+    public bool Login(string email, string password)
     {
-        int index = usernames.IndexOf(username);
+        int index = emails.IndexOf(email);
         if (index == -1)
         {
             return false; 

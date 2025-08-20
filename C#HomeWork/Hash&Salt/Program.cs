@@ -1,4 +1,5 @@
 ﻿Authen authen = new Authen();
+OTP_Service otpService = new OTP_Service();
 bool isRunning = true;
 
 while (isRunning)
@@ -14,7 +15,7 @@ while (isRunning)
     switch (choice)
     {
         case "1":
-            Console.Write("Enter username: ");
+            Console.Write("Enter email: ");
             string regUsername = Console.ReadLine();
             Console.Write("Enter password: ");
             string regPassword = Console.ReadLine();
@@ -24,22 +25,32 @@ while (isRunning)
             }
             else
             {
-                Console.WriteLine("Username already exists.");
+                Console.WriteLine("Email already exists.");
             }
             break;
         case "2":
-            Console.Write("Enter username: ");
-            string loginUsername = Console.ReadLine();
+            Console.Write("Enter email: ");
+            string loginEmail = Console.ReadLine();
             Console.Write("Enter password: ");
             string loginPassword = Console.ReadLine();
-            if (authen.Login(loginUsername, loginPassword))
+            if (authen.Login(loginEmail, loginPassword))
             {
-                Console.WriteLine("Login successful!");
-                return; // Exit the loop on successful login
+                Console.WriteLine("Login successful! Sending OTP for verification...");
+                string otp = await otpService.SendOTP(loginEmail); // Gửi OTP
+                Console.Write("Enter the OTP sent to your email: ");
+                string userOtp = Console.ReadLine();
+                if (await otpService.VerifyOTP(loginEmail, userOtp))
+                {
+                    Console.WriteLine("OTP verified! Authentication completed.");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid or expired OTP.");
+                }
             }
             else
             {
-                Console.WriteLine("Invalid username or password.");
+                Console.WriteLine("Invalid email or password.");
             }
             break;
         case "3":
