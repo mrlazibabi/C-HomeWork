@@ -1,7 +1,7 @@
 ﻿using Dumpify;
 using System.Text.RegularExpressions;
 
-Regex regex = new Regex(@"^\+[1-9]\d{1,11}$");
+Regex regex = new Regex(@"^\+[1-9]\d{9,11}$");
 string[] testNumbers = new[]
 {
     "+1234567890",    // Valid
@@ -11,11 +11,8 @@ string[] testNumbers = new[]
     "+123456789012345" // Invalid (too long)
 };
 
-MatchCollection[] results = testNumbers
-    .Select(number => regex.Matches(number))
-    .ToArray();
-
-foreach (MatchCollection result in results)
+foreach (string numebr in testNumbers)
 {
-    result.Dump();
+    bool isValid = regex.IsMatch(numebr);
+    Console.WriteLine(new { numebr, isValid }.Dump());
 }
