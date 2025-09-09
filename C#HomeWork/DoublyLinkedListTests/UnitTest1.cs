@@ -11,7 +11,7 @@ public class DoublyLinkedListTests
         Assert.Equal("", result);
     }
 
-    [Fact]
+    [Fact] 
     public void Traverse_NonEmptyList_ReturnsForwardString()
     {
         DoublyLinkedList list = new DoublyLinkedList();

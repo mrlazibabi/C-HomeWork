@@ -49,7 +49,7 @@ public class DoublyLinkedList
             current = current.Next;
         }
         return result.Trim();
-    }
+    } 
 
     public void InsertHead(int value)
     {
