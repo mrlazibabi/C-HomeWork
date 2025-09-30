@@ -1,0 +1,1301 @@
+[
+  {
+    "Id": 1,
+    "Name": "Crackers - Water",
+    "Price": 42.39,
+    "Quantity": 38,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2009-07-06T03:58:55Z",
+    "Category": [
+      "Beverages",
+      "Condiments",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 2,
+    "Name": "Brandy Cherry - Mcguinness",
+    "Price": 75.3,
+    "Quantity": 14,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2014-10-31T07:00:25Z",
+    "Category": [
+      "Frozen",
+      "Beverages",
+      "Meat",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 3,
+    "Name": "Sparkling Wine - Rose, Freixenet",
+    "Price": 21.2,
+    "Quantity": 31,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2021-05-16T03:51:35Z",
+    "Category": [
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 4,
+    "Name": "Cookie Dough - Oatmeal Rasin",
+    "Price": 24.95,
+    "Quantity": 81,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2021-11-28T09:01:32Z",
+    "Category": [
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 5,
+    "Name": "Gloves - Goldtouch Disposable",
+    "Price": 60.39,
+    "Quantity": 89,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2012-11-03T14:26:28Z",
+    "Category": [
+      "Snacks",
+      "Condiments",
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 6,
+    "Name": "Wine - White, Lindemans Bin 95",
+    "Price": 30.72,
+    "Quantity": 53,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2014-01-02T04:53:21Z",
+    "Category": [
+      "Condiments",
+      "Fruits",
+      "Bakery",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 7,
+    "Name": "Juice - Lagoon Mango",
+    "Price": 94.48,
+    "Quantity": 79,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2021-07-23T15:40:08Z",
+    "Category": [
+      "Meat",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 8,
+    "Name": "Octopus - Baby, Cleaned",
+    "Price": 23.2,
+    "Quantity": 83,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2004-09-28T17:45:31Z",
+    "Category": [
+      "Bakery",
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 9,
+    "Name": "Truffle - Peelings",
+    "Price": 46.05,
+    "Quantity": 92,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2006-06-14T18:59:23Z",
+    "Category": [
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 10,
+    "Name": "Flour - Pastry",
+    "Price": 94.6,
+    "Quantity": 64,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2002-12-14T03:17:13Z",
+    "Category": [
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 11,
+    "Name": "Mustard Prepared",
+    "Price": 96.69,
+    "Quantity": 76,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2020-02-03T02:11:24Z",
+    "Category": [
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 12,
+    "Name": "Juice - Lime",
+    "Price": 32.28,
+    "Quantity": 51,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2011-03-25T07:01:30Z",
+    "Category": [
+      "Snacks",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 13,
+    "Name": "Table Cloth 53x53 White",
+    "Price": 89.24,
+    "Quantity": 11,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2003-07-30T22:06:37Z",
+    "Category": [
+      "Meat",
+      "Seafood",
+      "Bakery",
+      "Snacks",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 14,
+    "Name": "Dried Cherries",
+    "Price": 18.44,
+    "Quantity": 80,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2015-02-15T01:43:11Z",
+    "Category": [
+      "Dairy",
+      "Beverages",
+      "Snacks",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 15,
+    "Name": "Lettuce - Mini Greens, Whole",
+    "Price": 12.38,
+    "Quantity": 41,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2011-05-11T07:33:18Z",
+    "Category": [
+      "Condiments",
+      "Beverages",
+      "Frozen",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 16,
+    "Name": "Melon - Honey Dew",
+    "Price": 44.06,
+    "Quantity": 64,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2017-05-20T15:59:09Z",
+    "Category": [
+      "Condiments",
+      "Frozen",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 17,
+    "Name": "Caviar - Salmon",
+    "Price": 46.88,
+    "Quantity": 68,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2021-09-12T22:03:11Z",
+    "Category": [
+      "Snacks",
+      "Meat",
+      "Dairy",
+      "Seafood",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 18,
+    "Name": "Thermometer Digital",
+    "Price": 48.29,
+    "Quantity": 49,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2007-01-25T10:14:03Z",
+    "Category": [
+      "Beverages",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 19,
+    "Name": "Shrimp - Black Tiger 16/20",
+    "Price": 68.4,
+    "Quantity": 10,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2018-07-15T10:36:38Z",
+    "Category": [
+      "Dairy",
+      "Snacks",
+      "Seafood",
+      "Bakery",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 20,
+    "Name": "Salmon - Fillets",
+    "Price": 48.99,
+    "Quantity": 46,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2000-12-24T23:44:29Z",
+    "Category": [
+      "Beverages",
+      "Meat",
+      "Frozen",
+      "Fruits",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 21,
+    "Name": "Chocolate Eclairs",
+    "Price": 66.06,
+    "Quantity": 93,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2018-12-08T05:57:03Z",
+    "Category": [
+      "Dairy",
+      "Condiments",
+      "Frozen",
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 22,
+    "Name": "Pork - Butt, Boneless",
+    "Price": 91.52,
+    "Quantity": 47,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2005-05-01T15:35:59Z",
+    "Category": [
+      "Snacks",
+      "Beverages",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 23,
+    "Name": "Pumpkin",
+    "Price": 69.89,
+    "Quantity": 23,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2007-02-06T18:29:31Z",
+    "Category": [
+      "Snacks",
+      "Beverages",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 24,
+    "Name": "Blouse / Shirt / Sweater",
+    "Price": 79.83,
+    "Quantity": 61,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2021-08-06T12:30:12Z",
+    "Category": [
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 25,
+    "Name": "Bread - Malt",
+    "Price": 10.84,
+    "Quantity": 13,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2012-03-28T01:35:27Z",
+    "Category": [
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 26,
+    "Name": "Pasta - Penne, Rigate, Dry",
+    "Price": 30.31,
+    "Quantity": 67,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2020-05-21T20:40:27Z",
+    "Category": [
+      "Fruits",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 27,
+    "Name": "Instant Coffee",
+    "Price": 99.8,
+    "Quantity": 5,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2009-07-24T22:00:11Z",
+    "Category": [
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 28,
+    "Name": "Dried Cherries",
+    "Price": 65.63,
+    "Quantity": 36,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2004-03-08T22:05:38Z",
+    "Category": [
+      "Meat",
+      "Beverages",
+      "Snacks",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 29,
+    "Name": "Haggis",
+    "Price": 24.44,
+    "Quantity": 32,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2009-03-17T04:06:16Z",
+    "Category": [
+      "Bakery",
+      "Beverages",
+      "Vegetables",
+      "Frozen",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 30,
+    "Name": "Truffle Cups Green",
+    "Price": 26.11,
+    "Quantity": 11,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2006-10-14T14:36:43Z",
+    "Category": [
+      "Frozen",
+      "Seafood",
+      "Meat",
+      "Beverages",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 31,
+    "Name": "Island Oasis - Lemonade",
+    "Price": 91.33,
+    "Quantity": 96,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2013-01-08T04:40:48Z",
+    "Category": [
+      "Vegetables",
+      "Frozen",
+      "Condiments",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 32,
+    "Name": "Energy Drink Red Bull",
+    "Price": 48.79,
+    "Quantity": 71,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2005-01-25T00:18:05Z",
+    "Category": [
+      "Frozen",
+      "Fruits",
+      "Snacks",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 33,
+    "Name": "Sprouts - Alfalfa",
+    "Price": 31.12,
+    "Quantity": 61,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2013-10-14T12:07:02Z",
+    "Category": [
+      "Dairy",
+      "Meat",
+      "Frozen",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 34,
+    "Name": "Pork - Sausage, Medium",
+    "Price": 63.05,
+    "Quantity": 1,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2013-05-31T23:22:12Z",
+    "Category": [
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 35,
+    "Name": "Fond - Chocolate",
+    "Price": 55.52,
+    "Quantity": 21,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2002-01-17T23:07:17Z",
+    "Category": [
+      "Meat",
+      "Fruits",
+      "Vegetables",
+      "Bakery",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 36,
+    "Name": "Rum - Dark, Bacardi, Black",
+    "Price": 77.08,
+    "Quantity": 42,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2002-03-02T04:58:35Z",
+    "Category": [
+      "Fruits",
+      "Meat",
+      "Condiments",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 37,
+    "Name": "Pizza Pizza Dough",
+    "Price": 45.2,
+    "Quantity": 100,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2014-10-16T13:07:53Z",
+    "Category": [
+      "Vegetables",
+      "Dairy",
+      "Seafood",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 38,
+    "Name": "Chinese Foods - Chicken",
+    "Price": 73.06,
+    "Quantity": 23,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2019-03-05T18:24:24Z",
+    "Category": [
+      "Meat",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 39,
+    "Name": "Chip - Potato Dill Pickle",
+    "Price": 69.69,
+    "Quantity": 23,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2019-02-23T10:52:30Z",
+    "Category": [
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 40,
+    "Name": "Beans - Fava Fresh",
+    "Price": 53.36,
+    "Quantity": 1,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2010-12-23T07:55:46Z",
+    "Category": [
+      "Vegetables",
+      "Condiments",
+      "Beverages",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 41,
+    "Name": "Kolrabi",
+    "Price": 41.28,
+    "Quantity": 7,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2017-10-13T03:56:02Z",
+    "Category": [
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 42,
+    "Name": "Pesto - Primerba, Paste",
+    "Price": 66.93,
+    "Quantity": 92,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2019-10-29T05:04:57Z",
+    "Category": [
+      "Seafood",
+      "Meat",
+      "Dairy",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 43,
+    "Name": "Pastry - Apple Large",
+    "Price": 26.03,
+    "Quantity": 80,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2015-04-26T00:07:28Z",
+    "Category": [
+      "Meat",
+      "Seafood",
+      "Snacks",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 44,
+    "Name": "Pastry - Plain Baked Croissant",
+    "Price": 83.55,
+    "Quantity": 54,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2023-03-21T06:51:56Z",
+    "Category": [
+      "Seafood",
+      "Meat",
+      "Condiments",
+      "Fruits",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 45,
+    "Name": "Parsley - Dried",
+    "Price": 97.06,
+    "Quantity": 70,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2017-12-27T07:16:05Z",
+    "Category": [
+      "Dairy",
+      "Seafood",
+      "Fruits",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 46,
+    "Name": "Pasta - Bauletti, Chicken White",
+    "Price": 70.21,
+    "Quantity": 76,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2005-07-26T11:58:30Z",
+    "Category": [
+      "Frozen",
+      "Snacks",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 47,
+    "Name": "Grenadine",
+    "Price": 64.32,
+    "Quantity": 96,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2010-04-20T09:21:21Z",
+    "Category": [
+      "Vegetables",
+      "Frozen",
+      "Bakery",
+      "Condiments",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 48,
+    "Name": "Cheese - Marble",
+    "Price": 45.7,
+    "Quantity": 32,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2009-08-18T03:03:42Z",
+    "Category": [
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 49,
+    "Name": "Aromat Spice / Seasoning",
+    "Price": 91.85,
+    "Quantity": 60,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2019-02-03T04:58:29Z",
+    "Category": [
+      "Fruits",
+      "Dairy",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 50,
+    "Name": "Table Cloth 90x90 White",
+    "Price": 13.94,
+    "Quantity": 55,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2005-04-04T01:21:54Z",
+    "Category": [
+      "Meat",
+      "Vegetables",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 51,
+    "Name": "Oil - Truffle, White",
+    "Price": 27.54,
+    "Quantity": 44,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2019-07-04T02:30:57Z",
+    "Category": [
+      "Snacks",
+      "Vegetables",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 52,
+    "Name": "Table Cloth 81x81 Colour",
+    "Price": 99.13,
+    "Quantity": 27,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2007-11-18T18:41:19Z",
+    "Category": [
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 53,
+    "Name": "Bag - Regular Kraft 20 Lb",
+    "Price": 22.91,
+    "Quantity": 74,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2021-01-14T22:03:10Z",
+    "Category": [
+      "Fruits",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 54,
+    "Name": "Cookie Trail Mix",
+    "Price": 93.75,
+    "Quantity": 70,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2016-08-28T16:29:19Z",
+    "Category": [
+      "Fruits",
+      "Vegetables",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 55,
+    "Name": "Lychee - Canned",
+    "Price": 34.88,
+    "Quantity": 48,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2002-08-30T04:27:45Z",
+    "Category": [
+      "Beverages",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 56,
+    "Name": "Cheese - Cambozola",
+    "Price": 32.56,
+    "Quantity": 75,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2021-11-21T03:17:30Z",
+    "Category": [
+      "Condiments",
+      "Fruits",
+      "Dairy",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 57,
+    "Name": "Coffee - Cafe Moreno",
+    "Price": 97.61,
+    "Quantity": 83,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2019-07-27T02:13:41Z",
+    "Category": [
+      "Bakery",
+      "Dairy",
+      "Vegetables",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 58,
+    "Name": "Wine - Peller Estates Late",
+    "Price": 91.36,
+    "Quantity": 14,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2001-07-23T17:00:44Z",
+    "Category": [
+      "Seafood",
+      "Bakery",
+      "Snacks",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 59,
+    "Name": "Chick Peas - Dried",
+    "Price": 91.81,
+    "Quantity": 44,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2002-09-25T17:55:47Z",
+    "Category": [
+      "Seafood",
+      "Frozen",
+      "Condiments",
+      "Snacks",
+      "Fruits"
+    ]
+  },
+  {
+    "Id": 60,
+    "Name": "Veal - Inside",
+    "Price": 19.2,
+    "Quantity": 26,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2015-04-16T09:16:07Z",
+    "Category": [
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 61,
+    "Name": "Salami - Genova",
+    "Price": 42.63,
+    "Quantity": 54,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2004-03-14T14:44:34Z",
+    "Category": [
+      "Vegetables",
+      "Seafood",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 62,
+    "Name": "Towels - Paper / Kraft",
+    "Price": 22.05,
+    "Quantity": 94,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2017-06-25T10:53:44Z",
+    "Category": [
+      "Dairy",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 63,
+    "Name": "Potatoes - Mini Red",
+    "Price": 59.5,
+    "Quantity": 50,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2016-03-21T02:37:59Z",
+    "Category": [
+      "Dairy",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 64,
+    "Name": "Flour - Teff",
+    "Price": 11.26,
+    "Quantity": 65,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2009-12-31T23:10:54Z",
+    "Category": [
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 65,
+    "Name": "Coffee Decaf Colombian",
+    "Price": 79.92,
+    "Quantity": 44,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2005-04-15T08:08:13Z",
+    "Category": [
+      "Dairy",
+      "Vegetables",
+      "Bakery",
+      "Beverages",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 66,
+    "Name": "Cleaner - Bleach",
+    "Price": 62.72,
+    "Quantity": 10,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2013-07-10T11:24:09Z",
+    "Category": [
+      "Condiments",
+      "Seafood",
+      "Meat",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 67,
+    "Name": "Ham - Virginia",
+    "Price": 70.6,
+    "Quantity": 37,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2013-10-15T06:17:25Z",
+    "Category": [
+      "Condiments",
+      "Bakery",
+      "Fruits",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 68,
+    "Name": "Syrup - Chocolate",
+    "Price": 61.79,
+    "Quantity": 30,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2022-05-23T10:00:48Z",
+    "Category": [
+      "Dairy",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 69,
+    "Name": "Veal - Ground",
+    "Price": 53.59,
+    "Quantity": 11,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2012-06-12T18:13:36Z",
+    "Category": [
+      "Beverages",
+      "Condiments",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 70,
+    "Name": "Compound - Raspberry",
+    "Price": 63.25,
+    "Quantity": 65,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2004-12-26T14:48:43Z",
+    "Category": [
+      "Beverages",
+      "Meat",
+      "Seafood",
+      "Bakery",
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 71,
+    "Name": "Petit Baguette",
+    "Price": 74.89,
+    "Quantity": 18,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2020-07-16T15:21:55Z",
+    "Category": [
+      "Frozen",
+      "Meat",
+      "Fruits",
+      "Snacks",
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 72,
+    "Name": "Chicken Thigh - Bone Out",
+    "Price": 21.7,
+    "Quantity": 59,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2004-08-08T14:17:42Z",
+    "Category": [
+      "Bakery",
+      "Frozen",
+      "Dairy",
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 73,
+    "Name": "Wine - Cava Aria Estate Brut",
+    "Price": 16.57,
+    "Quantity": 90,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2013-02-19T06:38:02Z",
+    "Category": [
+      "Beverages"
+    ]
+  },
+  {
+    "Id": 74,
+    "Name": "Juice - Propel Sport",
+    "Price": 68.02,
+    "Quantity": 22,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2012-09-29T21:29:23Z",
+    "Category": [
+      "Beverages",
+      "Frozen",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 75,
+    "Name": "Kippers - Smoked",
+    "Price": 84.64,
+    "Quantity": 43,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2019-08-21T02:01:13Z",
+    "Category": [
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 76,
+    "Name": "Wine - Red, Pelee Island Merlot",
+    "Price": 51.63,
+    "Quantity": 42,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2013-03-29T09:27:52Z",
+    "Category": [
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 77,
+    "Name": "Energy - Boo - Koo",
+    "Price": 48.17,
+    "Quantity": 6,
+    "Manufacturer": "BevFoods",
+    "CreateDate": "2004-09-08T02:02:50Z",
+    "Category": [
+      "Frozen"
+    ]
+  },
+  {
+    "Id": 78,
+    "Name": "Dome Lid Clear P92008h",
+    "Price": 16.03,
+    "Quantity": 66,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2008-11-09T04:35:40Z",
+    "Category": [
+      "Condiments",
+      "Snacks",
+      "Vegetables",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 79,
+    "Name": "Jam - Raspberry",
+    "Price": 80.79,
+    "Quantity": 57,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2007-10-03T21:00:16Z",
+    "Category": [
+      "Dairy",
+      "Vegetables",
+      "Seafood",
+      "Meat",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 80,
+    "Name": "Beef Ground Medium",
+    "Price": 13.12,
+    "Quantity": 80,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2014-07-31T16:19:06Z",
+    "Category": [
+      "Seafood",
+      "Meat",
+      "Frozen",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 81,
+    "Name": "Fudge - Chocolate Fudge",
+    "Price": 76.27,
+    "Quantity": 60,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2013-07-20T09:42:53Z",
+    "Category": [
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 82,
+    "Name": "Dish Towel",
+    "Price": 87.21,
+    "Quantity": 53,
+    "Manufacturer": "SnackPro",
+    "CreateDate": "2017-08-30T17:34:44Z",
+    "Category": [
+      "Seafood",
+      "Snacks"
+    ]
+  },
+  {
+    "Id": 83,
+    "Name": "Shrimp - Baby, Warm Water",
+    "Price": 84.87,
+    "Quantity": 49,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2005-02-09T22:55:05Z",
+    "Category": [
+      "Frozen",
+      "Condiments",
+      "Fruits",
+      "Snacks",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 84,
+    "Name": "Tuna - Bluefin",
+    "Price": 69.9,
+    "Quantity": 99,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2018-08-13T10:53:03Z",
+    "Category": [
+      "Meat",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 85,
+    "Name": "Strawberries - California",
+    "Price": 20.42,
+    "Quantity": 1,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2013-12-02T02:20:45Z",
+    "Category": [
+      "Snacks",
+      "Frozen",
+      "Meat",
+      "Condiments",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 86,
+    "Name": "Cheese - Cheddarsliced",
+    "Price": 50.31,
+    "Quantity": 91,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2008-10-16T03:54:06Z",
+    "Category": [
+      "Beverages",
+      "Meat",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 87,
+    "Name": "Wine - Chateau Timberlay",
+    "Price": 34.88,
+    "Quantity": 95,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2006-02-28T21:08:10Z",
+    "Category": [
+      "Beverages",
+      "Seafood",
+      "Vegetables",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 88,
+    "Name": "Dawn Professionl Pot And Pan",
+    "Price": 37.24,
+    "Quantity": 99,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2023-01-28T17:24:08Z",
+    "Category": [
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 89,
+    "Name": "Pork - Ham Hocks - Smoked",
+    "Price": 99.99,
+    "Quantity": 21,
+    "Manufacturer": "FreshCo",
+    "CreateDate": "2005-11-29T01:55:25Z",
+    "Category": [
+      "Seafood",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 90,
+    "Name": "Mushrooms - Honey",
+    "Price": 60.29,
+    "Quantity": 13,
+    "Manufacturer": "BakeTech",
+    "CreateDate": "2013-09-08T20:51:30Z",
+    "Category": [
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 91,
+    "Name": "Pepper - Chilli Seeds Mild",
+    "Price": 53.0,
+    "Quantity": 39,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2002-08-02T01:33:01Z",
+    "Category": [
+      "Beverages",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 92,
+    "Name": "Campari",
+    "Price": 80.78,
+    "Quantity": 98,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2001-10-13T02:08:01Z",
+    "Category": [
+      "Vegetables",
+      "Condiments",
+      "Seafood",
+      "Beverages",
+      "Dairy"
+    ]
+  },
+  {
+    "Id": 93,
+    "Name": "Roe - Flying Fish",
+    "Price": 53.98,
+    "Quantity": 5,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2006-07-19T17:30:20Z",
+    "Category": [
+      "Fruits",
+      "Frozen",
+      "Meat",
+      "Bakery",
+      "Condiments"
+    ]
+  },
+  {
+    "Id": 94,
+    "Name": "Soup Campbells - Italian Wedding",
+    "Price": 16.82,
+    "Quantity": 81,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2002-02-25T13:50:51Z",
+    "Category": [
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 95,
+    "Name": "Ice Cream Bar - Oreo Cone",
+    "Price": 62.52,
+    "Quantity": 66,
+    "Manufacturer": "CondimentCo",
+    "CreateDate": "2011-10-01T02:51:19Z",
+    "Category": [
+      "Meat"
+    ]
+  },
+  {
+    "Id": 96,
+    "Name": "Cookie - Dough Variety",
+    "Price": 72.96,
+    "Quantity": 65,
+    "Manufacturer": "OrganicBiz",
+    "CreateDate": "2008-05-08T14:18:24Z",
+    "Category": [
+      "Condiments",
+      "Frozen",
+      "Beverages",
+      "Bakery",
+      "Vegetables"
+    ]
+  },
+  {
+    "Id": 97,
+    "Name": "Bread - Frozen Basket Variety",
+    "Price": 74.69,
+    "Quantity": 5,
+    "Manufacturer": "SeaStar",
+    "CreateDate": "2008-08-09T05:30:27Z",
+    "Category": [
+      "Bakery",
+      "Frozen",
+      "Meat"
+    ]
+  },
+  {
+    "Id": 98,
+    "Name": "Crab - Imitation Flakes",
+    "Price": 51.19,
+    "Quantity": 42,
+    "Manufacturer": "FrostyFoods",
+    "CreateDate": "2023-10-07T08:10:44Z",
+    "Category": [
+      "Frozen",
+      "Meat",
+      "Bakery"
+    ]
+  },
+  {
+    "Id": 99,
+    "Name": "Squid Ink",
+    "Price": 74.15,
+    "Quantity": 98,
+    "Manufacturer": "MeatMasters",
+    "CreateDate": "2006-03-23T08:53:03Z",
+    "Category": [
+      "Frozen",
+      "Seafood"
+    ]
+  },
+  {
+    "Id": 100,
+    "Name": "Pepperoni Slices",
+    "Price": 53.62,
+    "Quantity": 25,
+    "Manufacturer": "DairyTech",
+    "CreateDate": "2002-02-05T12:58:35Z",
+    "Category": [
+      "Beverages",
+      "Frozen",
+      "Condiments",
+      "Fruits"
+    ]
+  }
+]
